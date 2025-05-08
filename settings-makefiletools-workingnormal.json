@@ -1,0 +1,311 @@
+{
+    "editor.fontSize": 15,
+    "editor.fontFamily": "DejaVu Sans Mono,Consolas, 'Courier New', monospace",
+    "editor.wordWrap": "on",
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderLineHighlight": "all",
+    "editor.experimentalWhitespaceRendering": "font",
+    "editor.wordWrapColumn": 68,
+    "platformio-ide.useBuiltinPython": false,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.shellIntegration.history": 5000,
+    "terminal.integrated.scrollback": 10000,
+    "settingsSync.ignoredExtensions": [
+        "ms-vscode-remote.remote-wsl",
+        "ms-vscode.powershell"
+    ],
+    "hexeditor.showOpenFileButton": true,
+    "redhat.telemetry.enabled": false,
+    "remote.SSH.showLoginTerminal": true,
+    "remote.SSH.experimental.chat": false,
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.cStandard": "c23",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.default.compilerPath": "",
+    "C_Cpp.doxygen.generatedStyle": "/**",
+    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.default.compileCommands": [
+        ""
+    ],
+    "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": false,
+    "C_Cpp.default.customConfigurationVariables": {},
+    "window.restoreWindows": "none",
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.enablePreview": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[makefile]": {
+        "editor.insertSpaces": false
+    },
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.debugConfig": {},
+    "cmake.options.statusBarVisibility": "visible",
+    "git.suggestSmartCommit": false,
+    "gitlens.launchpad.indicator.enabled": false,
+    "digital-ide.dont-show-again.propose.issue": true,
+    "digital-ide.function.doc.pdf.browserPath": "\"C:/Program Files (x86)/Foxit Software/Foxit Phantom/FoxitPhantom.exe\"",
+    "digital-ide.function.lsp.formatter.vhdl.default.align-comments": true,
+    "digital-ide.function.lsp.formatter.vlog.default.style": "ansi",
+    "digital-ide.function.simulate.gtkwavePath": "D:/ProgramFiles/oss-cad-suite/bin",
+    "digital-ide.prj.iverilog.install.path": "D:/ProgramFiles/oss-cad-suite/bin",
+    "digital-ide.prj.vivado.install.path": "/opt/Xilinx/Vivado/2024.2/bin/",
+    "digital-ide.welcome.show": false,
+    "digital-ide.function.lsp.linter.verilog.diagnostor": "vivado",
+    "plantuml.jar": "D:\\ProgramFiles\\plantUMLandDeps\\plantuml.jar",
+    "plantuml.render": "Local",
+    "dev.containers.dockerPath": "podman",
+    "dev.containers.dockerComposePath": "podman-compose",
+    "makefile.configureOnOpen": true,
+    "makefile.configurations": [
+        {
+            "name": "Debug",
+            "makeArgs": ["DEBUG=y"]
+        },
+        {
+            "name": "Release",
+            "makeArgs": ["RELEASE=y"]
+        }
+    ],
+    "latex-workshop.bibtex-format.tab": "4 spaces",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "xelatexmk",
+            "command": "latexmk",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-xelatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2tex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2texminted",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pnw2tex",
+            "command": "pweave",
+            "args": [
+                "-f",
+                "tex",
+                "%DOC_EXT%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pnw2texminted",
+            "command": "pweave",
+            "args": [
+                "-f",
+                "texminted",
+                "%DOC_EXT%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "--synctex",
+                "--keep-logs",
+                "--print",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "latexmk (latexmkrc)",
+            "tools": [
+                "latexmk_rconly"
+            ]
+        },
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk",
+                "lualatexmk"
+            ]
+        },
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "xelatexmk",
+                "xelatexmk"
+            ]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex * 2",
+            "tools": [
+                "xelatexmk",
+                "biber",
+                "xelatexmk",
+                "xelatexmk"
+            ]
+        },
+        {
+            "name": "lualatex -> biber -> lualatex * 2",
+            "tools": [
+                "lualatexmk",
+                "biber",
+                "lualatexmk",
+                "lualatexmk"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex * 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "Compile Rnw files",
+            "tools": [
+                "rnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Compile Jnw files",
+            "tools": [
+                "jnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Compile Pnw files",
+            "tools": [
+                "pnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "tectonic",
+            "tools": [
+                "tectonic"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "pandoc.pdfOptString": "--pdf-engine=lualatex -V documentclass=ctexart",
+    "pandoc.htmlOptString": "--standlone -t html5",
+    "vscode-office.chromiumPath": "\"C:\\Users\\Copper\\AppData\\Local\\Chromium\\Application\\chrome.exe\"",
+    "vscode-office.openOutline": false,
+    "workbench.iconTheme": "vscode-icons",
+    "containers.containerClient": "com.microsoft.visualstudio.containers.podman",
+}
