@@ -27,3 +27,5 @@ clean:
 	-rm *.out
 	-rm *.pam
 	-rm *.rgba
+	-rm random2imageWinGCC
+	-rm random2imageWinCLANG
