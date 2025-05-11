@@ -9,10 +9,16 @@ C_FLAFS := -std=$(C_STANDARD) -O0
 #CC := "D:\ProgramFiles\msys64\mingw64\bin\gcc"
 #这样设定能在wsl和windows的mingw环境下通用
 GNUCC := gcc
+LLVMCLANG := clang
+
+all: random2imageWinGCC random2imageWinCLANG
 
 #random2imageOnWinMsys: random2image.c toBigEndian.h
-random2imageOnWinMsys: random2image.c
-	$(GNUCC) -o random2imageOnWinMsys $(C_FLAFS) random2image.c toBigEndian.h
+random2imageWinGCC: random2image.c
+	$(GNUCC) -o random2imageWinGCC $(C_FLAFS) random2image.c
+
+random2imageWinCLANG: random2image.c
+	$(LLVMCLANG) -o random2imageWinCLANG $(C_FLAFS) random2image.c
 
 
 .PHONY: clean
