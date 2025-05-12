@@ -105,6 +105,7 @@ int main(void)
         pamfileheader.tupltype_type\
     );
     fwrite(random2image, sizeof(random2image[0][0]), N*N, rand2image_pam);
+                                //Be careful, 2D array should with 2 index!!!
     fclose(rand2image_pam);
 
     //free(random2image);
