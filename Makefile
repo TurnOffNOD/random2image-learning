@@ -2,8 +2,10 @@ C_STANDARD := c23
 DEBUG_FLAG := -g
 C_FLAFS := -std=$(C_STANDARD) -O0
 
-#ifeq($(DEBUG), 
-#	C_FLAFS += DEBUG_FLAG
+DEBUG := 1
+
+#ifeq ($(DEBUG)),
+C_FLAFS += $(DEBUG_FLAG)
 #endif
 
 #CC := "D:\ProgramFiles\msys64\mingw64\bin\gcc"

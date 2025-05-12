@@ -6,7 +6,7 @@
 #include <stdint.h>
 //#include "toBigEndian.h"
 
-#define N 710
+#define N 8192
 
 //typedef struct RGBA_fileHeader
 //{
@@ -38,30 +38,30 @@ int main(void)
 {
     srand(time(NULL));
 
-    unsigned int rows =N, cols =N;
+    //unsigned int rows =N, cols =N;
 
     //unsigned int random2image[N][N];
-    unsigned int  (*random2image)[cols] = calloc(rows, sizeof(*random2image));
+    unsigned int  (*random2image)[N] = calloc(N, sizeof(*random2image));
     assert(random2image != NULL);
 
 //    int random_variable = rand();
 //    printf("Random value on [0,%d]: %d\n", RAND_MAX, random_variable);
-    printf("siezof(int): %zuByte, int_max: %d, unsignedint_max %u, RAND_MAX:%d, sizeof(random2image): %zu\n", \
-        sizeof(int), \
-        (int)((1ULL << (8*sizeof(int)-1ULL))-1ULL), \
-        (unsigned int)((1ULL << 8*sizeof(int))-1ULL), \
-        RAND_MAX, \
-        sizeof(random2image) \
-    );
-
-    printf("INT_WIDTH: %zubit, INT_MAX: %zu, UINT_MAX %zu, RAND_MAX:%zu, sizeof(random2image): %zu\n", \
-        INT_WIDTH, \
-        //INT_WIDTH need C23 standard
-        INT_MAX, \
-        UINT_MAX, \
-        RAND_MAX, \
-        sizeof(random2image) \
-    );
+//    printf("siezof(int): %zuByte, int_max: %d, unsignedint_max %u, RAND_MAX:%llX, sizeof(random2image): %zu\n", \
+//        sizeof(int), \
+//        (int)((1ULL << (8*sizeof(int)-1ULL))-1ULL), \
+//        (unsigned int)((1ULL << 8*sizeof(int))-1ULL), \
+//        RAND_MAX, \
+//        sizeof(random2image) \
+//    );
+//
+//    printf("INT_WIDTH: %ubit, INT_MAX: %d, UINT_MAX %u, RAND_MAX:%llX, sizeof(random2image): %zu\n", \
+//        INT_WIDTH, \
+//        //INT_WIDTH need C23 standard
+//        INT_MAX, \
+//        UINT_MAX, \
+//        RAND_MAX, \
+//        sizeof(random2image) \
+//    );
 
 
     for(unsigned int i =0; i <N; i++)
@@ -71,6 +71,7 @@ int main(void)
             unsigned int temp = rand();
 
             random2image[i][j] = (temp << 16) | (temp >> (sizeof(int) - 16));
+            //random2image[i][j] = temp;
         }
     }
 
@@ -103,10 +104,10 @@ int main(void)
         pamfileheader.maxval_number, 
         pamfileheader.tupltype_type\
     );
-    fwrite(random2image, sizeof(random2image[0]), sizeof(random2image)/sizeof(random2image[0]), rand2image_pam);
+    fwrite(random2image, sizeof(random2image[0][0]), N*N, rand2image_pam);
     fclose(rand2image_pam);
 
-    free(random2image);
+    //free(random2image);
 
     printf("Done!\n");
 
